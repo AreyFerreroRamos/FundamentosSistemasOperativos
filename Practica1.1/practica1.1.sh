@@ -1,8 +1,8 @@
 # !/bin/bash
 
-# Descripció : Donat un fitxer anomenat 'dates.txt' es vol comprovar que el format dels components de cada línia sigui correcte.
 # Autor: Arey Ferrero Ramos.
-# Data: 20 de febrer del 2022. 
+# Data: 20 de febrer del 2022. Versió: 2. 
+# Descripció : Donat un fitxer anomenat 'dates.txt' es vol comprovar que el format dels components de cada línia sigui correcte.
 
 if [ $# -eq 1 ]
 then
@@ -55,10 +55,10 @@ then
 		done
 		exit 0
 	else
-		echo -e "El paràmetre d'entrada ha de ser un fitxer."
+		echo -e "El paràmetre d'entrada ha de ser un fitxer." >&2
 		exit 1
 	fi
 else
-	echo -e "Us: $0 dates.txt"
+	echo -e "Us: $0 dates.txt" >&2
 	exit 2
 fi
